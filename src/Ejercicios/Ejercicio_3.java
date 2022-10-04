@@ -35,4 +35,17 @@ public class Ejercicio_3 {
     }
     return z;
   }
+
+  // MODO RECURSIVO
+  public double calcSuma_R() {
+    return suma(n);
+  }
+
+  private double suma(double n) {
+    if (n > 0) {
+      return suma(n - 1) + suma(n / 2);
+    } else {
+      return n;
+    }
+  }
 }
