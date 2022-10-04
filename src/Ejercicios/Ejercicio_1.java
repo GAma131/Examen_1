@@ -21,29 +21,33 @@ public class Ejercicio_1 {
         return n;
     }
 
-    // // MODO ITERATIVO
-    // public double calcSuma_I() {
-    //     double z = 0;
-    //     int c=2;
+    // MODO ITERATIVO
+    public double calcSuma_I() {
+        double z = 0;
+        int c=2;
 
-    //     for (double i = 1; i <= n; i++) {
-    //         objFact.setX(c);
-    //         z += i / objFact.FactIterativo();
-    //         c+=2;
-    //     }
-    //     return z;
-    // }
+        for (double i = 1; i <= n; i++) {
+            objFact.setX(c);
+            z += i / objFact.FactIterativo();
+            c+=2;
+        }
+        return z;
+    }
 
-    // todo: MODO RECURSIVO
+    // MODO RECURSIVO
     public double calcSuma_R(){
         return suma(n);
     }
 
-    public double suma(double n){
-        if (n > 0) {
-            return suma(n-1) + suma(n/2);
-        }else{
-            return n;
+    private double suma(int n) {
+        if (n == 1) {
+            objFact.setX(n*2);
+            e+=n/objFact.FactIterativo();
+        } else {
+            objFact.setX(n*2);
+             e+= n / (objFact.FactIterativo());
+             suma(n-1);
         }
+        return e;
     }
 }

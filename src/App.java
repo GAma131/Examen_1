@@ -20,20 +20,24 @@ public class App {
     switch (opcion) {
       case 1:
         Ejercicio_1 obj1 = new Ejercicio_1(5);
-        // JOptionPane.showMessageDialog(
-        //   null,
-        //   "Metodo iterativo: " + obj1.calcSuma_I()+"\nMetodo recursivo: "+obj1.calcSuma_R()
-        // );
-        JOptionPane.showMessageDialog(null, obj1.calcSuma_R());
+        JOptionPane.showMessageDialog(
+          null,
+          "Metodo iterativo: " + obj1.calcSuma_I()+"\nMetodo recursivo: "+obj1.calcSuma_R()
+        );
         break;
       case 2:
         Ejercicio_2 obj2 = new Ejercicio_2(37, 12);
-        JOptionPane.showMessageDialog(null, obj2.multiplicar_R());
+        JOptionPane.showMessageDialog(
+          null,
+          "Metodo iterativo: " + obj2.multiplicar_I()+"\nMetodo recursivo: "+obj2.multiplicar_R()
+        );
         break;
       case 3:
         Ejercicio_3 obj3 = new Ejercicio_3(3);
-        // JOptionPane.showMessageDialog(null, obj3.calcSuma_I());
-        JOptionPane.showMessageDialog(null, obj3.calcSuma_R());
+        JOptionPane.showMessageDialog(
+          null,
+          "Metodo iterativo: " + obj3.calcSuma_I()+"\nMetodo recursivo: "+obj3.calcSuma_R()
+        );
         break;
       default:
         break;
